@@ -1,0 +1,124 @@
+{
+  "theme_strategy": "light",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST with EDITORIAL TWIST",
+  "emotional_tone": "Authority, Objectivity, Clarity, Trust. Designed for political consultants and journalists.",
+  "typography": {
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Chivo",
+      "mono": "IBM Plex Mono"
+    },
+    "installation": "Ensure fonts are imported from Google Fonts in index.css or via next/font (if Next.js) or standard link tags in index.html.",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-heading tracking-tight text-neutral-950",
+      "h2": "text-2xl sm:text-3xl font-heading tracking-tight text-neutral-950",
+      "h3": "text-xl font-heading font-semibold text-neutral-900",
+      "h4": "text-sm uppercase tracking-[0.2em] font-body font-semibold text-neutral-500",
+      "body": "text-base font-body text-neutral-700 leading-relaxed",
+      "data_number": "text-3xl sm:text-4xl font-mono font-medium tracking-tight text-neutral-950"
+    }
+  },
+  "colors": {
+    "background": "#F8F7F5",
+    "surface": "#FFFFFF",
+    "text": {
+      "primary": "#111111",
+      "secondary": "#525252",
+      "tertiary": "#737373"
+    },
+    "borders": "#E5E3DB",
+    "accents": {
+      "primary": "#111111",
+      "primary_hover": "#333333"
+    },
+    "sentiment": {
+      "positive": "#059669",
+      "neutral": "#D97706",
+      "negative": "#DC2626"
+    },
+    "platforms": {
+      "reddit": "#FF4500",
+      "youtube": "#FF0000",
+      "news": "#1D4ED8"
+    }
+  },
+  "layouts_and_spacing": {
+    "global": "Generous container padding. Use max-w-[1400px] mx-auto for the dashboard container.",
+    "grid_strategy": "High Density Grid (Bento style). Base grid: grid-cols-1 md:grid-cols-3 lg:grid-cols-4. Gap: gap-6.",
+    "card_surfaces": "Flat, non-glossy. bg-white border border-[#E5E3DB] shadow-sm rounded-sm p-5 md:p-6. Avoid heavy drop shadows. Keep it editorial and sharp.",
+    "header": "Sticky top, backdrop-blur-xl bg-white/80 border-b border-[#E5E3DB] px-6 py-4 z-50.",
+    "alignment": "Left-align text and data unless centering explicitly improves tabular readability. Optical alignment is key."
+  },
+  "visual_enhancers": {
+    "borders": "Expose the grid where possible. Use 1px solid borders for separation instead of shadows.",
+    "hover_states": "Interactive elements (buttons, table rows) must have explicit hover states (e.g., hover:bg-neutral-50).",
+    "textures": "Subtle noise/grain overlay can be added to the main body background to enhance the 'newspaper/editorial' feel, but keep cards pure white for data legibility."
+  },
+  "components": {
+    "cards": {
+      "usage": "Use raw div or customized Shadcn Card. Strip rounded-xl and heavy shadows. Use rounded-sm and shadow-sm.",
+      "components_path": "/app/frontend/src/components/ui/card.jsx"
+    },
+    "buttons": {
+      "usage": "Sharp or slightly rounded (rounded-sm). Primary buttons: bg-[#111111] text-white hover:bg-[#333333]. Secondary: border border-[#E5E3DB] bg-transparent hover:bg-neutral-50.",
+      "components_path": "/app/frontend/src/components/ui/button.jsx"
+    },
+    "tables": {
+      "usage": "For Top Voices / Influencers. Minimalist styling, border-b only on rows, no vertical borders. Use avatar component for headshots.",
+      "components_path": "/app/frontend/src/components/ui/table.jsx"
+    },
+    "charts": {
+      "usage": "Use Recharts (or Shadcn Chart). Style tooltips to be sharp rectangles (rounded-none). Line charts for sentiment trends should use the sentiment colors and strokeWidth={2}. Area charts should have subtle gradients.",
+      "components_path": "/app/frontend/src/components/ui/chart.jsx (if exists, else raw recharts)"
+    },
+    "search_bar": {
+      "usage": "Prominent, large input field in the header or hero section. Use Shadcn Input with a Lucide Search icon. Example: h-12 text-lg rounded-sm."
+    },
+    "tabs": {
+      "usage": "For Comparison Mode or Platform toggles. Minimalist underline style rather than chunky pills.",
+      "components_path": "/app/frontend/src/components/ui/tabs.jsx"
+    }
+  },
+  "image_urls": {
+    "description": "DO NOT USE PLACEHOLDERS. Use these verified Unsplash/Pexels images for avatars.",
+    "top_voices_avatars": [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NTMwNTUyOXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NTMwNTUyOXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1699899657680-421c2c2d5064?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NTMwNTUyOXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NTMwNTUyOXww&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure text meets minimum 4.5:1 contrast. Negative/Positive red and green should be checked against white surface.",
+    "testing_attributes": "All interactive elements MUST include data-testid. Example: data-testid='search-input', data-testid='export-report-button'.",
+    "focus_states": "Custom focus rings using ring-2 ring-neutral-900 ring-offset-2."
+  },
+  "motion": {
+    "interactions": "Hover states must transition colors smoothly (transition-colors duration-200).",
+    "entrance": "Staggered fade-in (framer-motion or simple CSS) for dashboard cards on initial load to make the data feel 'calculated'."
+  },
+  "instructions_to_main_agent": [
+    "Read this document carefully. Implement an editorial, political-consulting dashboard.",
+    "DO NOT use generic purple/indigo SaaS colors. Stick to the editorial monochrome palette with specific sentiment accents.",
+    "DO NOT use `Inter` or standard sans for headings. `Playfair Display` is MANDATORY for large headings/metrics. Use `Chivo` or `IBM Plex Sans` for body.",
+    "Make the dashboard feel dense, authoritative, and data-rich.",
+    "Implement the 'Top Voices' table using the provided real image URLs for avatars. NEVER use placeholder text or dummy image services.",
+    "Ensure the chart components properly use the sentiment palette (Green for positive, Red for negative, Yellow/Gold for neutral).",
+    "Avoid heavy shadows and large border radii. Keep cards sharp (rounded-sm) and borders crisp."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid generic, 'on-distribution' outputs. Do not make generic centered layouts or simplistic gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) where appropriate (e.g., header).",
+    "DO NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements.",
+    "DO NOT center align the app container (.App { text-align: center; }).",
+    "Always use modern button styles with interaction animations.",
+    "NEVER use AI assistant Emoji characters (like 🤖🧠💭) for icons.",
+    "Every interaction needs micro-animations (hover states, focus states).",
+    "Missing categories (especially avatars/logos) = main agent will use placeholder text which is FORBIDDEN. Use provided image URLs.",
+    "Prioritize using pre-existing components from src/components/ui.",
+    "All interactive elements MUST include data-testid attribute for testing."
+  ]
+}
+
